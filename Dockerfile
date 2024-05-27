@@ -37,6 +37,9 @@ USER app
 WORKDIR /app
 COPY . /app
 COPY --from=dependencies node_modules ./node_modules
+ 
+
+VOLUME /app/config /app/data
 
 CMD npm start
 
