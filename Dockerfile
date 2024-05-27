@@ -17,7 +17,8 @@
 FROM alpine:latest as dependencies
 
 RUN apk add --no-cache \
-    nodejs npm 
+    nodejs npm python3 build-base sqlite py3-pip py3-setuptools
+
 
 COPY package.json  .
 RUN npm install 
